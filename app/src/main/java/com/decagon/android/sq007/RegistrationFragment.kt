@@ -37,16 +37,13 @@ class RegistrationFragment : Fragment(R.layout.fragment_registration),
 
             //Prints toast if any filed does not pass successful validation
            if (!Utils.nameValidator(name))
-               Toast.makeText(context, R.string.invalid_name_message, Toast.LENGTH_SHORT)
-                   .show()
+               Toast.makeText(context, R.string.invalid_name_message, Toast.LENGTH_SHORT).show()
 
            else if (!Utils.emailValidator(email))
-               Toast.makeText(requireContext(), R.string.invalid_email_message, Toast.LENGTH_SHORT)
-                   .show()
+               Toast.makeText(requireContext(), R.string.invalid_email_message, Toast.LENGTH_SHORT).show()
 
            else if (!Utils.phoneNumberValidator(phone))
-               Toast.makeText(requireContext(), R.string.invalid_phone_message, Toast.LENGTH_SHORT)
-                   .show()
+               Toast.makeText(requireContext(), R.string.invalid_phone_message, Toast.LENGTH_SHORT).show()
 
            else
                parentFragmentManager.commit {
@@ -56,21 +53,10 @@ class RegistrationFragment : Fragment(R.layout.fragment_registration),
                 }
 
             //Bundles data in a key-value pair via Fragment Manager to ProfileFragment
-            setFragmentResult(getString(R.string.name_key),
-                bundleOf(getString(R.string.bundle_key) to name)
-            )
-
-            setFragmentResult(getString(R.string.gender_key),
-                bundleOf(getString(R.string.bundle_key) to itemSelected)
-            )
-
-            setFragmentResult(getString(R.string.email_key),
-                bundleOf(getString(R.string.bundle_key) to email)
-            )
-
-            setFragmentResult(getString(R.string.phone_key),
-                bundleOf(getString(R.string.bundle_key) to phone)
-            )
+            setFragmentResult(getString(R.string.name_key), bundleOf(getString(R.string.bundle_key) to name))
+            setFragmentResult(getString(R.string.gender_key), bundleOf(getString(R.string.bundle_key) to itemSelected))
+            setFragmentResult(getString(R.string.email_key), bundleOf(getString(R.string.bundle_key) to email))
+            setFragmentResult(getString(R.string.phone_key), bundleOf(getString(R.string.bundle_key) to phone))
         }
 
         val spinner: Spinner = binding!!.spinnerGender

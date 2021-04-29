@@ -24,13 +24,6 @@
     <string name="saved_instance_email_key">email</string>
     <string name="saved_instance_phone_key">phone</string>
     <string name="saved_instance_gender_key">gender</string>
-<!--    <string name=""></string>-->
-<!--    <string name=""></string>-->
-<!--    <string name=""></string>-->
-<!--    <string name=""></string>-->
-<!--    <string name=""></string>-->
-<!--    <string name=""></string>-->
-
 
     <string-array name="planets_array">
     <item>Male</item>
